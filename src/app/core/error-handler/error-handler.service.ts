@@ -1,29 +1,3 @@
-/**
- * Copyright since 2025 Mifos Initiative
- *
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- */
-
-/**
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 import { Injectable, inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -38,43 +12,34 @@ export interface ErrorMessage {
   actionType?: string;
 }
 
-/**
- * Centralized error handler service for consistent error messaging
- * across the application. Converts HTTP errors into user-friendly
- * messages and displays them through snackbar notifications.
- */
-@Injectable({
-  providedIn: 'root'
-})
+export interface FineractErrorDetail {
+  userMessageGlobalisationCode?: string;
+  defaultUserMessage?: string;
+}
+export interface FineractErrorResponse {
+  userMessageGlobalisationCode?: string;
+  defaultUserMessage?: string;
+  errors?: FineractErrorDetail[];
+}
+
+@Injectable({ providedIn: 'root' })
 export class ErrorHandlerService {
   private snackBar = inject(MatSnackBar);
   private router = inject(Router);
-  private translateService = inject(TranslateService);
+  private translate = inject(TranslateService);
 
-  /**
-   * Handle HTTP errors and show user-friendly messages
-   * @param error The HTTP error response
-   * @param context Optional context to provide more specific error messages
-   * @returns Observable that throws the original error
-   */
   handleError(error: HttpErrorResponse, context?: string): Observable<never> {
     const errorMessage = this.getErrorMessage(error, context);
     this.showError(errorMessage);
     return throwError(() => error);
   }
 
-  /**
-   * Get user-friendly error message based on HTTP status
-   * @param error The HTTP error response
-   * @param context Optional context for more specific messages
-   * @returns ErrorMessage object with title, message, and action
-   */
   private getErrorMessage(error: HttpErrorResponse, context?: string): ErrorMessage {
     if (error.error instanceof ErrorEvent) {
       return {
-        title: this.translateService.instant('errors.http.connection.title'),
-        message: this.translateService.instant('errors.http.connection.message'),
-        action: this.translateService.instant('labels.buttons.OK')
+        title: this.translate.instant('errors.http.connection.title'),
+        message: this.translate.instant('errors.http.connection.message'),
+        action: this.translate.instant('labels.buttons.OK')
       };
     }
 
@@ -84,106 +49,107 @@ export class ErrorHandlerService {
     switch (error.status) {
       case 400:
         return {
-          title: this.translateService.instant('errors.http.badRequest.title'),
-          message: fineractError || defaultMessage || this.translateService.instant('errors.http.badRequest.message'),
-          action: this.translateService.instant('labels.buttons.OK')
+          title: this.translate.instant('errors.http.badRequest.title'),
+          message: fineractError || defaultMessage || this.translate.instant('errors.http.badRequest.message'),
+          action: this.translate.instant('labels.buttons.OK')
         };
       case 401:
         return {
-          title: this.translateService.instant('errors.http.unauthorized.title'),
-          message: this.translateService.instant('errors.http.unauthorized.message'),
-          action: this.translateService.instant('errors.http.unauthorized.action'),
+          title: this.translate.instant('errors.http.unauthorized.title'),
+          message: this.translate.instant('errors.http.unauthorized.message'),
+          action: this.translate.instant('errors.http.unauthorized.action'),
           actionType: 'login'
         };
       case 403:
         return {
-          title: this.translateService.instant('errors.http.forbidden.title'),
-          message: fineractError || defaultMessage || this.translateService.instant('errors.http.forbidden.message'),
-          action: this.translateService.instant('labels.buttons.OK')
+          title: this.translate.instant('errors.http.forbidden.title'),
+          message: fineractError || defaultMessage || this.translate.instant('errors.http.forbidden.message'),
+          action: this.translate.instant('labels.buttons.OK')
         };
       case 404:
         return {
-          title: this.translateService.instant('errors.http.notFound.title'),
+          title: this.translate.instant('errors.http.notFound.title'),
           message: context
-            ? this.translateService.instant('errors.http.notFound.contextMessage', { context })
-            : fineractError || defaultMessage || this.translateService.instant('errors.http.notFound.message'),
-          action: this.translateService.instant('labels.buttons.OK')
+            ? this.translate.instant('errors.http.notFound.contextMessage', { context })
+            : fineractError || defaultMessage || this.translate.instant('errors.http.notFound.message'),
+          action: this.translate.instant('labels.buttons.OK')
         };
       case 409:
         return {
-          title: this.translateService.instant('errors.http.conflict.title'),
-          message: fineractError || defaultMessage || this.translateService.instant('errors.http.conflict.message'),
-          action: this.translateService.instant('labels.buttons.OK')
+          title: this.translate.instant('errors.http.conflict.title'),
+          message: fineractError || defaultMessage || this.translate.instant('errors.http.conflict.message'),
+          action: this.translate.instant('labels.buttons.OK')
         };
       case 500:
         return {
-          title: this.translateService.instant('errors.http.serverError.title'),
-          message: fineractError || defaultMessage || this.translateService.instant('errors.http.serverError.message'),
-          action: this.translateService.instant('labels.buttons.OK')
+          title: this.translate.instant('errors.http.serverError.title'),
+          message: fineractError || defaultMessage || this.translate.instant('errors.http.serverError.message'),
+          action: this.translate.instant('labels.buttons.OK')
         };
       case 503:
         return {
-          title: this.translateService.instant('errors.http.serviceUnavailable.title'),
-          message: this.translateService.instant('errors.http.serviceUnavailable.message'),
-          action: this.translateService.instant('labels.buttons.OK')
+          title: this.translate.instant('errors.http.serviceUnavailable.title'),
+          message: this.translate.instant('errors.http.serviceUnavailable.message'),
+          action: this.translate.instant('labels.buttons.OK')
         };
       default:
         return {
-          title: this.translateService.instant('errors.http.default.title'),
-          message: fineractError || defaultMessage || this.translateService.instant('errors.http.default.message'),
-          action: this.translateService.instant('labels.buttons.OK')
+          title: this.translate.instant('errors.http.default.title'),
+          message: fineractError || defaultMessage || this.translate.instant('errors.http.default.message'),
+          action: this.translate.instant('labels.buttons.OK')
         };
     }
   }
 
-  /**
-   * Show error message to user via snackbar
-   * @param errorMessage The error message object to display
-   */
   private showError(errorMessage: ErrorMessage): void {
     const snackBarRef = this.snackBar.open(
       `${errorMessage.title}: ${errorMessage.message}`,
-      errorMessage.action || this.translateService.instant('labels.buttons.Close'),
-      {
-        duration: 5000,
-        horizontalPosition: 'center',
-        verticalPosition: 'top',
-        panelClass: ['error-snackbar']
-      }
+      errorMessage.action || this.translate.instant('labels.buttons.Close'),
+      { duration: 5000, horizontalPosition: 'center', verticalPosition: 'top', panelClass: ['error-snackbar'] }
     );
-
     if (errorMessage.actionType === 'login') {
-      snackBarRef.onAction().subscribe(() => {
-        this.router.navigate(['/login']);
-      });
+      snackBarRef.onAction().subscribe(() => { this.router.navigate(['/login']); });
     }
   }
 
-  /**
-   * Show success message to user via snackbar
-   * @param message The success message to display
-   * @param action Optional action button text (defaults to 'OK')
-   */
   showSuccess(message: string, action: string = 'OK'): void {
     this.snackBar.open(message, action, {
-      duration: 3000,
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom',
-      panelClass: ['success-snackbar']
+      duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom', panelClass: ['success-snackbar']
     });
   }
 
-  /**
-   * Show info message to user via snackbar
-   * @param message The info message to display
-   * @param action Optional action button text (defaults to 'OK')
-   */
   showInfo(message: string, action: string = 'OK'): void {
     this.snackBar.open(message, action, {
-      duration: 4000,
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom',
-      panelClass: ['info-snackbar']
+      duration: 4000, horizontalPosition: 'center', verticalPosition: 'bottom', panelClass: ['info-snackbar']
     });
+  }
+
+  translateFineractError(errorResponse: FineractErrorResponse | null | undefined): string {
+    if (!errorResponse || typeof errorResponse !== 'object') { return ''; }
+    const messages: string[] = [];
+    if (errorResponse.userMessageGlobalisationCode) {
+      const mainMsg = this.getMessageForCode(errorResponse.userMessageGlobalisationCode, errorResponse.defaultUserMessage);
+      if (mainMsg) { messages.push(mainMsg); }
+    } else if (errorResponse.defaultUserMessage) {
+      messages.push(errorResponse.defaultUserMessage);
+    }
+    if (Array.isArray(errorResponse.errors)) {
+      errorResponse.errors.forEach((error: FineractErrorDetail) => {
+        if (!error || typeof error !== 'object') { return; }
+        if (error.userMessageGlobalisationCode) {
+          const nestedMsg = this.getMessageForCode(error.userMessageGlobalisationCode, error.defaultUserMessage);
+          if (nestedMsg) { messages.push(nestedMsg); }
+        } else if (error.defaultUserMessage) {
+          messages.push(error.defaultUserMessage);
+        }
+      });
+    }
+    return Array.from(new Set(messages.filter((m) => !!m && typeof m === 'string'))).join(' ');
+  }
+
+  private getMessageForCode(code: string, defaultMessage?: string): string {
+    if (!code) { return defaultMessage || ''; }
+    const translated = this.translate.instant(code);
+    return (translated && translated !== code) ? translated : (defaultMessage || '');
   }
 }

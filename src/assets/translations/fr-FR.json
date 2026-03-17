@@ -2,6 +2,8 @@
   "APP_NAME": "Mifos® X WebApp",
   "Logged in as": "connecté en tant que",
   "Remember me": "Souviens-toi de moi",
+  "error.msg.platform.service.unavailable": "Le serveur est actuellement incapable de traiter la requête, veuillez réessayer ultérieurement.",
+  "error.msg.database.type.not.supported": "Le type de données n'est pas pris en charge",
   "errors": {
     "accountingRule": {
       "duplicateName": "Désolé, mais une règle comptable portant ce nom existe déjà."
