@@ -1591,7 +1591,7 @@
       "Pause Timeline": "Pauzes laika līnija"
     },
     "inputs": {
-      "Breach Actions": "Pārkāpums Darbības",
+      "Breach Actions": "Pārkāpuma darbības",
       "# Remittance": "# Pārvedums",
       "# Senders": "# Sūtītāji",
       "ACCOUNTING": "GRĀMATVEDĪBA",
@@ -3154,7 +3154,6 @@
       "to": "uz",
       "valid": "derīgs",
       "Active Pause": "Aktīva pauze",
-      "Breach Actions": "Pārkāpuma darbības",
       "days": "dienas",
       "Duration": "Ilgums",
       "Expired": "Beidzies",
@@ -3167,7 +3166,13 @@
       "Scheduled": "Plānota",
       "Today": "Šodien",
       "Total Actions": "Darbības kopā",
-      "Total Days Paused": "Pauzes dienas kopā"
+      "Total Days Paused": "Pauzes dienas kopā",
+      "Bureau Readiness": "Biroja gatavība",
+      "Your CB-ILD Role": "Jūsu CB-ILD loma",
+      "KYC Completeness Score": "KYC pilnīguma rādītājs",
+      "CDC FICO Score": "CDC FICO rādītājs",
+      "No bureau data available": "Biroja dati nav pieejami",
+      "Failed to load bureau data": "Neizdevās ielādēt biroja datus"
     },
     "links": {
       "Community": "kopiena",
@@ -3313,7 +3318,8 @@
       "Tasks": "Uzdevumi",
       "Remittances": "Pārvedumi",
       "Process Remittance": "Apstrādāt pārvedumu",
-      "Undo Write-off": "Atcelt norakstīšanu"
+      "Undo Write-off": "Atcelt norakstīšanu",
+      "Reporting Dashboard": "Pārskatu panelis"
     },
     "placeholders": {
       "Add new server": "Pievienot jaunu serveri",
@@ -4484,6 +4490,39 @@
         "own.account": "Savs konts",
         "other.bank": "Cita banka"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RFC nodokļu ID (obligāts — stingrs veto)",
+        "dob": "Dzimšanas datums",
+        "firstName": "Vārds",
+        "lastName": "Uzvārds",
+        "address": "Adrese",
+        "phoneNumber": "Tālruņa numurs"
+      },
+      "errors": {
+        "unauthorized": "Autentifikācija neizdevās. Lūdzu, atlasiet savu lomu vēlreiz.",
+        "forbidden": "Jums nav atļaujas veikt šo darbību.",
+        "clientNotFound": "Klients {{ clientId }} nav atrasts Fineract.",
+        "serviceUnavailable": "CDC vai Fineract nav sasniedzams. Lūdzu, mēģiniet vēlāk.",
+        "unexpected": "Radās neparedzēta kļūda. Lūdzu, mēģiniet vēlreiz."
+      },
+      "dashboard": {
+        "role": "Jūsu CB-ILD loma",
+        "runBatch": "Palaist paketi",
+        "batchStarted": "Pakešu iesniegšana sākta visiem aktīvajiem klientiem",
+        "total": "Kopā iesniegumi",
+        "accepted": "Pieņemts",
+        "pendingRetry": "Gaida atkārtošanu",
+        "permanentlyFailed": "Pastāvīgi neizdevās",
+        "clientId": "Klienta ID",
+        "triggerType": "Aktivizētāja veids",
+        "status": "Statuss",
+        "cdcRef": "CDC atsauces ID",
+        "expiry": "Derīguma termiņš",
+        "submittedAt": "Iesniegts",
+        "noSubmissions": "Nav atrasts neviens iesniegums"
+      }
     }
   },
   "languages": {
@@ -4704,7 +4743,8 @@
     "Withdraw": "Izņemt",
     "Yes": "Jā",
     "loan product will be active and available to clients": "Datums, kad aizdevuma produkts būs aktīvs un pieejams klientiem. Ja lauks ir tukšs, aizdevuma produkts būs aktīvs, tiklīdz tas tiks izveidots.",
-    "loan product will become inactive and unavailable to clients": "Datums, kad aizdevuma produkts kļūs neaktīvs un klientiem nebūs pieejams. Ja lauks ir tukšs, ielādes produkts nekad nekļūs neaktīvs."
+    "loan product will become inactive and unavailable to clients": "Datums, kad aizdevuma produkts kļūs neaktīvs un klientiem nebūs pieejams. Ja lauks ir tukšs, ielādes produkts nekad nekļūs neaktīvs.",
+    "Reporting Dashboard": "CB-ILD pārskatu panelis"
   },
   "countries": {
     "AF": "Afganistāna",

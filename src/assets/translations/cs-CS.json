@@ -702,7 +702,7 @@
       "Reset": "Resetovat",
       "Reset Password": "Obnovit heslo",
       "Retrieve": "Načíst",
-      "Retry": "Opakovat",
+      "Retry": "Zkusit znovu",
       "Revert Transaction": "Vrátit transakci",
       "Run": "Spustit",
       "Run Catch-Up": "Spusťte Catch-Up",
@@ -1591,7 +1591,7 @@
       "Pause Timeline": "Časová osa pauz"
     },
     "inputs": {
-      "Breach Actions": "Porušení Akce",
+      "Breach Actions": "Akce porušení",
       "# Remittance": "# Remitence",
       "# Senders": "# Odesílatelé",
       "ACCOUNTING": "ÚČETNICTVÍ",
@@ -3154,7 +3154,6 @@
       "to": "na",
       "valid": "platný",
       "Active Pause": "Aktivní pauza",
-      "Breach Actions": "Akce porušení",
       "days": "dní",
       "Duration": "Doba trvání",
       "Expired": "Vypršela",
@@ -3167,7 +3166,13 @@
       "Scheduled": "Naplánováno",
       "Today": "Dnes",
       "Total Actions": "Celkové akce",
-      "Total Days Paused": "Celkový počet dní v pauze"
+      "Total Days Paused": "Celkový počet dní v pauze",
+      "Bureau Readiness": "Připravenost bureau",
+      "Your CB-ILD Role": "Vaše role CB-ILD",
+      "KYC Completeness Score": "Skóre úplnosti KYC",
+      "CDC FICO Score": "Skóre FICO CDC",
+      "No bureau data available": "Žádná data bureau nejsou k dispozici",
+      "Failed to load bureau data": "Nepodařilo se načíst data bureau"
     },
     "links": {
       "Community": "Společenství",
@@ -3314,7 +3319,8 @@
       "Tasks": "Úkoly",
       "Remittances": "Remitence",
       "Process Remittance": "Zpracovat remitenci",
-      "Undo Write-off": "Zrušit odpis"
+      "Undo Write-off": "Zrušit odpis",
+      "Reporting Dashboard": "Přehledový panel"
     },
     "placeholders": {
       "Add new server": "Přidat nový server",
@@ -4481,6 +4487,39 @@
         "ACCOUNTTRANSFER": "Převod účtu",
         "SSBENEFICIARYTPT": "Self-Service příjemci TPT"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RFC daňové ID (povinné — tvrdé veto)",
+        "dob": "Datum narození",
+        "firstName": "Jméno",
+        "lastName": "Příjmení",
+        "address": "Adresa",
+        "phoneNumber": "Telefonní číslo"
+      },
+      "errors": {
+        "unauthorized": "Ověření selhalo. Vyberte prosím svou roli znovu.",
+        "forbidden": "Nemáte oprávnění k provedení této akce.",
+        "clientNotFound": "Klient {{ clientId }} nebyl nalezen ve Fineract.",
+        "serviceUnavailable": "CDC nebo Fineract není dostupný. Zkuste to prosím později.",
+        "unexpected": "Došlo k neočekávané chybě. Zkuste to prosím znovu."
+      },
+      "dashboard": {
+        "role": "Vaše role CB-ILD",
+        "runBatch": "Spustit dávku",
+        "batchStarted": "Dávkové odeslání zahájeno pro všechny aktivní klienty",
+        "total": "Celkem odeslání",
+        "accepted": "Přijato",
+        "pendingRetry": "Čeká na opakování",
+        "permanentlyFailed": "Trvale selhalo",
+        "clientId": "ID klienta",
+        "triggerType": "Typ spouštěče",
+        "status": "Stav",
+        "cdcRef": "Referenční ID CDC",
+        "expiry": "Datum vypršení",
+        "submittedAt": "Odesláno",
+        "noSubmissions": "Žádná odeslání nenalezena"
+      }
     }
   },
   "permissions": {
@@ -4994,7 +5033,8 @@
     "Yes": "Ano",
     "loan product will be active and available to clients": "Datum, kdy bude úvěrový produkt aktivní a dostupný klientům. Pokud nevyplníte, bude úvěrový produkt aktivní, jakmile bude vytvořen.",
     "loan product will become inactive and unavailable to clients": "Datum, kdy se úvěrový produkt stane neaktivním a nedostupným pro klienty. Pokud je prázdné, produkt zatížení se nikdy nestane neaktivním.",
-    "to": "do"
+    "to": "do",
+    "Reporting Dashboard": "Přehledový panel CB-ILD"
   },
   "countries": {
     "AF": "Afghánistán",

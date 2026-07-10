@@ -1590,7 +1590,7 @@
       "Pause Timeline": "Pauzių laiko juosta"
     },
     "inputs": {
-      "Breach Actions": "Pažeidimas Veiksmai",
+      "Breach Actions": "Pažeidimo veiksmai",
       "# Remittance": "# Pervedimas",
       "# Senders": "# Siuntėjai",
       "ACCOUNTING": "APSKAITA",
@@ -3153,7 +3153,6 @@
       "to": "į",
       "valid": "galioja",
       "Active Pause": "Aktyvi pauzė",
-      "Breach Actions": "Pažeidimo veiksmai",
       "days": "dienos",
       "Duration": "Trukmė",
       "Expired": "Pasibaigė",
@@ -3166,7 +3165,13 @@
       "Scheduled": "Suplanuota",
       "Today": "Šiandien",
       "Total Actions": "Iš viso veiksmų",
-      "Total Days Paused": "Iš viso pauzės dienų"
+      "Total Days Paused": "Iš viso pauzės dienų",
+      "Bureau Readiness": "Biuro pasirengimas",
+      "Your CB-ILD Role": "Jūsų CB-ILD vaidmuo",
+      "KYC Completeness Score": "KYC išsamumo balas",
+      "CDC FICO Score": "CDC FICO balas",
+      "No bureau data available": "Biuro duomenų nėra",
+      "Failed to load bureau data": "Nepavyko įkelti biuro duomenų"
     },
     "links": {
       "Community": "bendruomenė",
@@ -3313,7 +3318,8 @@
       "Tasks": "Užduotys",
       "Remittances": "Pervedimai",
       "Process Remittance": "Apdoroti pervedimą",
-      "Undo Write-off": "Atšaukti nurašymą"
+      "Undo Write-off": "Atšaukti nurašymą",
+      "Reporting Dashboard": "Ataskaitų valdymo skydelis"
     },
     "placeholders": {
       "Add new server": "Pridėti naują serverį",
@@ -4485,6 +4491,39 @@
         "own.account": "Sava sąskaita",
         "other.bank": "Kitas bankas"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RFC mokesčių ID (privaloma — griežtas veto)",
+        "dob": "Gimimo data",
+        "firstName": "Vardas",
+        "lastName": "Pavardė",
+        "address": "Adresas",
+        "phoneNumber": "Telefono numeris"
+      },
+      "errors": {
+        "unauthorized": "Autentifikacija nepavyko. Pasirinkite savo vaidmenį iš naujo.",
+        "forbidden": "Neturite leidimo atlikti šį veiksmą.",
+        "clientNotFound": "Klientas {{ clientId }} nerastas Fineract.",
+        "serviceUnavailable": "CDC arba Fineract nepasiekiamas. Bandykite vėliau.",
+        "unexpected": "Įvyko netikėta klaida. Bandykite dar kartą."
+      },
+      "dashboard": {
+        "role": "Jūsų CB-ILD vaidmuo",
+        "runBatch": "Vykdyti paketą",
+        "batchStarted": "Paketo pateikimas pradėtas visiems aktyviems klientams",
+        "total": "Iš viso pateikimų",
+        "accepted": "Priimta",
+        "pendingRetry": "Laukia pakartojimo",
+        "permanentlyFailed": "Visam laikui nepavyko",
+        "clientId": "Kliento ID",
+        "triggerType": "Paleidiklio tipas",
+        "status": "Būsena",
+        "cdcRef": "CDC nuorodos ID",
+        "expiry": "Galiojimo pabaigos data",
+        "submittedAt": "Pateikta",
+        "noSubmissions": "Pateikimų nerasta"
+      }
     }
   },
   "languages": {
@@ -4705,7 +4744,8 @@
     "Withdraw": "Atsitraukti",
     "Yes": "Taip",
     "loan product will be active and available to clients": "Data, kada paskolos produktas bus aktyvus ir bus prieinamas klientams. Jei tuščia, paskolos produktas bus aktyvus, kai tik bus sukurtas.",
-    "loan product will become inactive and unavailable to clients": "Data, kai paskolos produktas taps neaktyvus ir nepasiekiamas klientams. Jei tuščia, įkėlimo produktas niekada netaps neaktyvus."
+    "loan product will become inactive and unavailable to clients": "Data, kai paskolos produktas taps neaktyvus ir nepasiekiamas klientams. Jei tuščia, įkėlimo produktas niekada netaps neaktyvus.",
+    "Reporting Dashboard": "CB-ILD ataskaitų skydelis"
   },
   "countries": {
     "AF": "Afganistanas",

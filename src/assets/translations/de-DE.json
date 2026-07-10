@@ -703,7 +703,7 @@
       "Reset": "Zurücksetzen",
       "Reset Password": "Passwort zurücksetzen",
       "Retrieve": "Abrufen",
-      "Retry": "Erneut versuchen",
+      "Retry": "Wiederholen",
       "Revert Transaction": "Transaktion rückgängig machen",
       "Run": "Ausführen",
       "Run Catch-Up": "Führen Sie Catch-Up durch",
@@ -1593,7 +1593,7 @@
       "Pause Timeline": "Pausen-Zeitleiste"
     },
     "inputs": {
-      "Breach Actions": "Verstoßaktionen",
+      "Breach Actions": "Verstoß-Aktionen",
       "# Remittance": "# Überweisung",
       "# Senders": "# Absender",
       "ACCOUNTING": "BUCHHALTUNG",
@@ -3156,7 +3156,6 @@
       "to": "Zu",
       "valid": "gültig",
       "Active Pause": "Aktive Pause",
-      "Breach Actions": "Verstoß-Aktionen",
       "days": "Tage",
       "Duration": "Dauer",
       "Expired": "Abgelaufen",
@@ -3169,7 +3168,13 @@
       "Scheduled": "Geplant",
       "Today": "Heute",
       "Total Actions": "Gesamtaktionen",
-      "Total Days Paused": "Pausentage gesamt"
+      "Total Days Paused": "Pausentage gesamt",
+      "Bureau Readiness": "Büro-Bereitschaft",
+      "Your CB-ILD Role": "Ihre CB-ILD-Rolle",
+      "KYC Completeness Score": "KYC-Vollständigkeitsbewertung",
+      "CDC FICO Score": "CDC FICO-Bewertung",
+      "No bureau data available": "Keine Bürodaten verfügbar",
+      "Failed to load bureau data": "Fehler beim Laden der Bürodaten"
     },
     "links": {
       "Community": "Gemeinschaft",
@@ -3316,7 +3321,8 @@
       "Tasks": "Aufgaben",
       "Remittances": "Überweisungen",
       "Process Remittance": "Überweisung bearbeiten",
-      "Undo Write-off": "Abschreibung rückgängig machen"
+      "Undo Write-off": "Abschreibung rückgängig machen",
+      "Reporting Dashboard": "Berichts-Dashboard"
     },
     "placeholders": {
       "Add new server": "Neuen Server hinzufügen",
@@ -4481,6 +4487,39 @@
         "ACCOUNTTRANSFER": "Kontoübertragung",
         "SSBENEFICIARYTPT": "Self-Service-Begünstigte TPT"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RFC-Steuer-ID (erforderlich — hartes Veto)",
+        "dob": "Geburtsdatum",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "address": "Adresse",
+        "phoneNumber": "Telefonnummer"
+      },
+      "errors": {
+        "unauthorized": "Authentifizierung fehlgeschlagen. Bitte wählen Sie Ihre Rolle erneut.",
+        "forbidden": "Sie haben keine Berechtigung für diese Aktion.",
+        "clientNotFound": "Client {{ clientId }} wurde in Fineract nicht gefunden.",
+        "serviceUnavailable": "CDC oder Fineract ist nicht erreichbar. Bitte versuchen Sie es später.",
+        "unexpected": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+      },
+      "dashboard": {
+        "role": "Ihre CB-ILD-Rolle",
+        "runBatch": "Stapel ausführen",
+        "batchStarted": "Stapelübermittlung für alle aktiven Clients gestartet",
+        "total": "Gesamteinreichungen",
+        "accepted": "Akzeptiert",
+        "pendingRetry": "Wiederholung ausstehend",
+        "permanentlyFailed": "Dauerhaft fehlgeschlagen",
+        "clientId": "Client-ID",
+        "triggerType": "Auslösertyp",
+        "status": "Status",
+        "cdcRef": "CDC-Referenz-ID",
+        "expiry": "Ablaufdatum",
+        "submittedAt": "Eingereicht am",
+        "noSubmissions": "Keine Einreichungen gefunden"
+      }
     }
   },
   "permissions": {
@@ -4994,7 +5033,8 @@
     "Yes": "Ja",
     "loan product will be active and available to clients": "Das Datum, an dem das Kreditprodukt aktiv und für Kunden gefunden sein wird. Wenn das Feld leer ist, ist das Kreditprodukt aktiv, sobald es erstellt wird.",
     "loan product will become inactive and unavailable to clients": "Das Datum, an dem das Kreditprodukt inaktiv wird und für Kunden nicht mehr gefunden ist. Wenn es leer ist, wird das Ladeprodukt niemals inaktiv.",
-    "to": "zu"
+    "to": "zu",
+    "Reporting Dashboard": "CB-ILD Berichts-Dashboard"
   },
   "countries": {
     "AF": "Afghanistan",

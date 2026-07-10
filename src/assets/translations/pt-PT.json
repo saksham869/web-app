@@ -1590,7 +1590,7 @@
       "Pause Timeline": "Cronologia de Pausas"
     },
     "inputs": {
-      "Breach Actions": "Ações de violação",
+      "Breach Actions": "Ações de Violação",
       "# Remittance": "# Remessa",
       "# Senders": "# Remetentes",
       "ACCOUNTING": "CONTABILIDADE",
@@ -3153,7 +3153,6 @@
       "to": "para",
       "valid": "válido",
       "Active Pause": "Pausa Ativa",
-      "Breach Actions": "Ações de Violação",
       "days": "dias",
       "Duration": "Duração",
       "Expired": "Expirada",
@@ -3166,7 +3165,13 @@
       "Scheduled": "Agendada",
       "Today": "Hoje",
       "Total Actions": "Total de Ações",
-      "Total Days Paused": "Total de Dias em Pausa"
+      "Total Days Paused": "Total de Dias em Pausa",
+      "Bureau Readiness": "Prontidão do bureau",
+      "Your CB-ILD Role": "Seu papel CB-ILD",
+      "KYC Completeness Score": "Pontuação de completude KYC",
+      "CDC FICO Score": "Pontuação FICO CDC",
+      "No bureau data available": "Nenhum dado do bureau disponível",
+      "Failed to load bureau data": "Falha ao carregar dados do bureau"
     },
     "links": {
       "Community": "Comunidade",
@@ -3313,7 +3318,8 @@
       "Tasks": "Tarefas",
       "Remittances": "Remessas",
       "Process Remittance": "Processar remessa",
-      "Undo Write-off": "Desfazer abatimento"
+      "Undo Write-off": "Desfazer abatimento",
+      "Reporting Dashboard": "Painel de relatórios"
     },
     "placeholders": {
       "Add new server": "Adicionar novo servidor",
@@ -4484,6 +4490,39 @@
         "own.account": "Conta Própria",
         "other.bank": "Outro Banco"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RFC ID fiscal (obrigatório — veto rígido)",
+        "dob": "Data de nascimento",
+        "firstName": "Nome",
+        "lastName": "Sobrenome",
+        "address": "Endereço",
+        "phoneNumber": "Número de telefone"
+      },
+      "errors": {
+        "unauthorized": "Falha na autenticação. Por favor selecione seu papel novamente.",
+        "forbidden": "Você não tem permissão para realizar esta ação.",
+        "clientNotFound": "Cliente {{ clientId }} não encontrado no Fineract.",
+        "serviceUnavailable": "CDC ou Fineract está inacessível. Por favor tente mais tarde.",
+        "unexpected": "Ocorreu um erro inesperado. Por favor tente novamente."
+      },
+      "dashboard": {
+        "role": "Seu papel CB-ILD",
+        "runBatch": "Executar lote",
+        "batchStarted": "Envio em lote iniciado para todos os clientes ativos",
+        "total": "Total de envios",
+        "accepted": "Aceitos",
+        "pendingRetry": "Aguardando nova tentativa",
+        "permanentlyFailed": "Falha permanente",
+        "clientId": "ID do cliente",
+        "triggerType": "Tipo de gatilho",
+        "status": "Status",
+        "cdcRef": "ID de referência CDC",
+        "expiry": "Data de validade",
+        "submittedAt": "Enviado em",
+        "noSubmissions": "Nenhum envio encontrado"
+      }
     }
   },
   "languages": {
@@ -4704,7 +4743,8 @@
     "Withdraw": "Retirar",
     "Yes": "Sim",
     "loan product will be active and available to clients": "A data em que o produto de empréstimo estará ativo e disponível para os clientes. Se estiver em branco, o produto de empréstimo estará ativo assim que for criado.",
-    "loan product will become inactive and unavailable to clients": "A data em que o produto de empréstimo ficará inativo e indisponível para os clientes. Se estiver em branco, o produto de empréstimo nunca ficará inativo."
+    "loan product will become inactive and unavailable to clients": "A data em que o produto de empréstimo ficará inativo e indisponível para os clientes. Se estiver em branco, o produto de empréstimo nunca ficará inativo.",
+    "Reporting Dashboard": "Painel CB-ILD"
   },
   "countries": {
     "AF": "Afeganistão",

@@ -3155,7 +3155,6 @@
       "to": "a",
       "valid": "válido",
       "Active Pause": "Pausa Activa",
-      "Breach Actions": "Acciones de Incumplimiento",
       "days": "días",
       "Duration": "Duración",
       "Expired": "Expirada",
@@ -3168,7 +3167,13 @@
       "Scheduled": "Programada",
       "Today": "Hoy",
       "Total Actions": "Acciones Totales",
-      "Total Days Paused": "Total de Días en Pausa"
+      "Total Days Paused": "Total de Días en Pausa",
+      "Bureau Readiness": "Preparación para el Buró",
+      "Your CB-ILD Role": "Tu rol CB-ILD",
+      "KYC Completeness Score": "Puntuación de completitud KYC",
+      "CDC FICO Score": "Puntuación FICO CDC",
+      "No bureau data available": "No hay datos del buró disponibles",
+      "Failed to load bureau data": "Error al cargar datos del buró"
     },
     "links": {
       "Community": "Comunidad",
@@ -3315,7 +3320,8 @@
       "Tasks": "Tareas",
       "Remittances": "Remesas",
       "Process Remittance": "Procesar Remesa",
-      "Undo Write-off": "Deshacer castigo contable"
+      "Undo Write-off": "Deshacer castigo contable",
+      "Reporting Dashboard": "Panel de reportes"
     },
     "placeholders": {
       "Add new server": "Agregar nuevo servidor",
@@ -4486,6 +4492,39 @@
         "own.account": "Cuenta Propia",
         "other.bank": "Otros Bancos"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RUT (requerido — veto duro)",
+        "dob": "Fecha de nacimiento",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "address": "Dirección",
+        "phoneNumber": "Número de teléfono"
+      },
+      "errors": {
+        "unauthorized": "Autenticación fallida. Por favor seleccione su rol nuevamente.",
+        "forbidden": "No tiene permiso para realizar esta acción.",
+        "clientNotFound": "Cliente {{ clientId }} no encontrado en Fineract.",
+        "serviceUnavailable": "CDC o Fineract no está disponible. Intente más tarde.",
+        "unexpected": "Ocurrió un error inesperado. Por favor intente nuevamente."
+      },
+      "dashboard": {
+        "role": "Tu rol CB-ILD",
+        "runBatch": "Ejecutar lote",
+        "batchStarted": "Envío por lote iniciado para todos los clientes activos",
+        "total": "Total de envíos",
+        "accepted": "Aceptados",
+        "pendingRetry": "Reintento pendiente",
+        "permanentlyFailed": "Fallido permanentemente",
+        "clientId": "ID de cliente",
+        "triggerType": "Tipo de disparador",
+        "status": "Estado",
+        "cdcRef": "ID de referencia CDC",
+        "expiry": "Fecha de vencimiento",
+        "submittedAt": "Enviado el",
+        "noSubmissions": "No se encontraron envíos"
+      }
     }
   },
   "languages": {
@@ -4706,7 +4745,8 @@
     "Withdraw": "Retirar",
     "Yes": "Sí",
     "loan product will be active and available to clients": "La fecha en que el producto de Crédito estará activo y disponibles para los clientes. Si está en blanco, el producto de Crédito estará activo tan pronto como se cree.",
-    "loan product will become inactive and unavailable to clients": "La fecha en que el producto de Crédito quedará inactivo y no estará disponibles para los clientes. Si está en blanco, el producto de carga nunca quedará inactivo."
+    "loan product will become inactive and unavailable to clients": "La fecha en que el producto de Crédito quedará inactivo y no estará disponibles para los clientes. Si está en blanco, el producto de carga nunca quedará inactivo.",
+    "Reporting Dashboard": "Panel de reportes CB-ILD"
   },
   "countries": {
     "AF": "Afganistán",

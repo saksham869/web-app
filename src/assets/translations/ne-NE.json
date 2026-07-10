@@ -1590,7 +1590,7 @@
       "Pause Timeline": "रोकावट समयरेखा"
     },
     "inputs": {
-      "Breach Actions": "उल्लंघन कार्यहरू",
+      "Breach Actions": "उल्लङ्घन कार्यहरू",
       "# Remittance": "# रेमिट्यान्स",
       "# Senders": "# पठाउनेहरू",
       "ACCOUNTING": "लेखा",
@@ -3153,7 +3153,6 @@
       "to": "को",
       "valid": "मान्य",
       "Active Pause": "सक्रिय रोकावट",
-      "Breach Actions": "उल्लङ्घन कार्यहरू",
       "days": "दिन",
       "Duration": "अवधि",
       "Expired": "समाप्त",
@@ -3166,7 +3165,13 @@
       "Scheduled": "तालिकाबद्ध",
       "Today": "आज",
       "Total Actions": "कुल कार्यहरू",
-      "Total Days Paused": "कुल रोकिएका दिनहरू"
+      "Total Days Paused": "कुल रोकिएका दिनहरू",
+      "Bureau Readiness": "ब्यूरो तयारी",
+      "Your CB-ILD Role": "तपाईंको CB-ILD भूमिका",
+      "KYC Completeness Score": "KYC पूर्णता स्कोर",
+      "CDC FICO Score": "CDC FICO स्कोर",
+      "No bureau data available": "ब्यूरो डेटा उपलब्ध छैन",
+      "Failed to load bureau data": "ब्यूरो डेटा लोड गर्न असफल"
     },
     "links": {
       "Community": "समुदाय",
@@ -3313,7 +3318,8 @@
       "Tasks": "कार्यहरू",
       "Remittances": "रेमिट्यान्स",
       "Process Remittance": "रेमिट्यान्स प्रक्रिया",
-      "Undo Write-off": "राइट-अफ पूर्ववत गर्नुहोस्"
+      "Undo Write-off": "राइट-अफ पूर्ववत गर्नुहोस्",
+      "Reporting Dashboard": "रिपोर्टिङ ड्यासबोर्ड"
     },
     "placeholders": {
       "Add new server": "नयाँ सर्भर थप्नुहोस्",
@@ -4484,6 +4490,39 @@
         "own.account": "आफ्नै खाता",
         "other.bank": "अन्य बैंक"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RFC कर ID (आवश्यक — कठोर भिटो)",
+        "dob": "जन्म मिति",
+        "firstName": "पहिलो नाम",
+        "lastName": "थर",
+        "address": "ठेगाना",
+        "phoneNumber": "फोन नम्बर"
+      },
+      "errors": {
+        "unauthorized": "प्रमाणीकरण असफल। कृपया आफ्नो भूमिका फेरि चयन गर्नुहोस्।",
+        "forbidden": "यो कार्य गर्न तपाईंसँग अनुमति छैन।",
+        "clientNotFound": "Fineract मा ग्राहक {{ clientId }} फेला परेन।",
+        "serviceUnavailable": "CDC वा Fineract उपलब्ध छैन। कृपया पछि प्रयास गर्नुहोस्।",
+        "unexpected": "अप्रत्याशित त्रुटि भयो। कृपया पुनः प्रयास गर्नुहोस्।"
+      },
+      "dashboard": {
+        "role": "तपाईंको CB-ILD भूमिका",
+        "runBatch": "ब्याच चलाउनुहोस्",
+        "batchStarted": "सबै सक्रिय ग्राहकहरूका लागि ब्याच सबमिसन सुरु भयो",
+        "total": "कुल सबमिसन",
+        "accepted": "स्वीकृत",
+        "pendingRetry": "पुनः प्रयास बाँकी",
+        "permanentlyFailed": "स्थायी रूपमा असफल",
+        "clientId": "ग्राहक ID",
+        "triggerType": "ट्रिगर प्रकार",
+        "status": "स्थिति",
+        "cdcRef": "CDC सन्दर्भ ID",
+        "expiry": "म्याद समाप्ति मिति",
+        "submittedAt": "सबमिट मिति",
+        "noSubmissions": "कुनै सबमिसन फेला परेन"
+      }
     }
   },
   "languages": {
@@ -4704,7 +4743,8 @@
     "Withdraw": "निकाल्नु",
     "Yes": "हो",
     "loan product will be active and available to clients": "ऋण उत्पादन सक्रिय र ग्राहकहरूको लागि उपलब्ध हुने मिति। खाली भएमा, ऋण उत्पादन सिर्जना हुने बित्तिकै सक्रिय हुनेछ।",
-    "loan product will become inactive and unavailable to clients": "ऋण उत्पादन निष्क्रिय र ग्राहकहरु को लागी अनुपलब्ध हुने मिति। यदि खाली छ भने, लोड उत्पादन कहिल्यै निष्क्रिय हुनेछैन।"
+    "loan product will become inactive and unavailable to clients": "ऋण उत्पादन निष्क्रिय र ग्राहकहरु को लागी अनुपलब्ध हुने मिति। यदि खाली छ भने, लोड उत्पादन कहिल्यै निष्क्रिय हुनेछैन।",
+    "Reporting Dashboard": "CB-ILD रिपोर्टिङ ड्यासबोर्ड"
   },
   "countries": {
     "AF": "अफगानिस्तान",

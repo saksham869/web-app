@@ -1588,7 +1588,7 @@
       "Pause Timeline": "Mfuatano wa Pumziko"
     },
     "inputs": {
-      "Breach Actions": "Ukiukaji Vitendo",
+      "Breach Actions": "Vitendo vya Ukiukaji",
       "# Remittance": "# Uhawilishaji",
       "# Senders": "# Watumaji",
       "ACCOUNTING": "UHASIBU",
@@ -3151,7 +3151,6 @@
       "to": "kwa",
       "valid": "halali",
       "Active Pause": "Pumziko Linaloendelea",
-      "Breach Actions": "Vitendo vya Ukiukaji",
       "days": "siku",
       "Duration": "Muda",
       "Expired": "Imeisha",
@@ -3164,7 +3163,13 @@
       "Scheduled": "Iliyopangwa",
       "Today": "Leo",
       "Total Actions": "Jumla ya Vitendo",
-      "Total Days Paused": "Jumla ya Siku za Pumziko"
+      "Total Days Paused": "Jumla ya Siku za Pumziko",
+      "Bureau Readiness": "Utayari wa Shirika",
+      "Your CB-ILD Role": "Jukumu lako la CB-ILD",
+      "KYC Completeness Score": "Alama ya Ukamilishaji wa KYC",
+      "CDC FICO Score": "Alama ya FICO ya CDC",
+      "No bureau data available": "Hakuna data ya shirika inayopatikana",
+      "Failed to load bureau data": "Imeshindwa kupakia data ya shirika"
     },
     "links": {
       "Community": "Jumuiya",
@@ -3310,7 +3315,8 @@
       "Tasks": "Kazi",
       "Remittances": "Uhawilishaji",
       "Process Remittance": "Chakata uhawilishaji",
-      "Undo Write-off": "Futa Kuandika-mbali"
+      "Undo Write-off": "Futa Kuandika-mbali",
+      "Reporting Dashboard": "Dashibodi ya Ripoti"
     },
     "placeholders": {
       "Add new server": "Ongeza seva mpya",
@@ -4481,6 +4487,39 @@
         "own.account": "Akaunti Yangu",
         "other.bank": "Benki Nyingine"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RFC Kitambulisho cha kodi (inahitajika — veto ngumu)",
+        "dob": "Tarehe ya kuzaliwa",
+        "firstName": "Jina la kwanza",
+        "lastName": "Jina la familia",
+        "address": "Anwani",
+        "phoneNumber": "Nambari ya simu"
+      },
+      "errors": {
+        "unauthorized": "Uthibitishaji umeshindwa. Tafadhali chagua jukumu lako tena.",
+        "forbidden": "Huna ruhusa ya kufanya kitendo hiki.",
+        "clientNotFound": "Mteja {{ clientId }} hapatikani katika Fineract.",
+        "serviceUnavailable": "CDC au Fineract haiwezekani kufikiwa. Tafadhali jaribu baadaye.",
+        "unexpected": "Hitilafu isiyotarajiwa imetokea. Tafadhali jaribu tena."
+      },
+      "dashboard": {
+        "role": "Jukumu lako la CB-ILD",
+        "runBatch": "Endesha kundi",
+        "batchStarted": "Uwasilishaji wa kundi umeanza kwa wateja wote wanaofanya kazi",
+        "total": "Jumla ya uwasilishaji",
+        "accepted": "Imekubaliwa",
+        "pendingRetry": "Inasubiri kujaribu tena",
+        "permanentlyFailed": "Imeshindwa kabisa",
+        "clientId": "Kitambulisho cha mteja",
+        "triggerType": "Aina ya kichocheo",
+        "status": "Hali",
+        "cdcRef": "Kitambulisho cha marejeleo ya CDC",
+        "expiry": "Tarehe ya kumalizika",
+        "submittedAt": "Iliwasilishwa",
+        "noSubmissions": "Hakuna uwasilishaji uliopatikana"
+      }
     }
   },
   "languages": {
@@ -4701,7 +4740,8 @@
     "Withdraw": "Kutoa",
     "Yes": "Ndiyo",
     "loan product will be active and available to clients": "Tarehe ambayo bidhaa ya mkopo itaanza kutumika na inapatikana kwa wateja. Ikiwa tupu, bidhaa ya mkopo itaanza kutumika mara tu itakapoundwa.",
-    "loan product will become inactive and unavailable to clients": "Tarehe ambayo bidhaa ya mkopo itaacha kutumika na haitapatikana kwa wateja. Ikiwa tupu, bidhaa ya kupakia haitafanya kazi kamwe."
+    "loan product will become inactive and unavailable to clients": "Tarehe ambayo bidhaa ya mkopo itaacha kutumika na haitapatikana kwa wateja. Ikiwa tupu, bidhaa ya kupakia haitafanya kazi kamwe.",
+    "Reporting Dashboard": "Dashibodi ya Ripoti ya CB-ILD"
   },
   "countries": {
     "AF": "Afghanistani",

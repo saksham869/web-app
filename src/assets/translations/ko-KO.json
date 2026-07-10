@@ -1592,7 +1592,7 @@
       "Pause Timeline": "일시중지 타임라인"
     },
     "inputs": {
-      "Breach Actions": "위반 행위",
+      "Breach Actions": "위반 작업",
       "# Remittance": "# 송금",
       "# Senders": "# 송금인",
       "ACCOUNTING": "회계",
@@ -3154,7 +3154,6 @@
       "to": "에게",
       "valid": "유효한",
       "Active Pause": "활성 일시중지",
-      "Breach Actions": "위반 작업",
       "days": "일",
       "Duration": "기간",
       "Expired": "만료됨",
@@ -3167,7 +3166,13 @@
       "Scheduled": "예약됨",
       "Today": "오늘",
       "Total Actions": "전체 작업",
-      "Total Days Paused": "총 일시중지 일수"
+      "Total Days Paused": "총 일시중지 일수",
+      "Bureau Readiness": "신용조회 준비 상태",
+      "Your CB-ILD Role": "CB-ILD 역할",
+      "KYC Completeness Score": "KYC 완성도 점수",
+      "CDC FICO Score": "CDC FICO 점수",
+      "No bureau data available": "신용조회 데이터 없음",
+      "Failed to load bureau data": "신용조회 데이터 로드 실패"
     },
     "links": {
       "Community": "지역 사회",
@@ -3313,7 +3318,8 @@
       "Tasks": "작업",
       "Remittances": "송금",
       "Process Remittance": "송금 처리",
-      "Undo Write-off": "상각 취소"
+      "Undo Write-off": "상각 취소",
+      "Reporting Dashboard": "보고 대시보드"
     },
     "placeholders": {
       "Add new server": "새 서버 추가",
@@ -4484,6 +4490,39 @@
         "own.account": "본인 계좌",
         "other.bank": "타행"
       }
+    },
+    "cbild": {
+      "fields": {
+        "nationalId": "RFC 세금 ID (필수 — 강제 거부)",
+        "dob": "생년월일",
+        "firstName": "이름",
+        "lastName": "성",
+        "address": "주소",
+        "phoneNumber": "전화번호"
+      },
+      "errors": {
+        "unauthorized": "인증에 실패했습니다. 역할을 다시 선택해 주세요.",
+        "forbidden": "이 작업을 수행할 권한이 없습니다.",
+        "clientNotFound": "Fineract에서 클라이언트 {{ clientId }}를 찾을 수 없습니다.",
+        "serviceUnavailable": "CDC 또는 Fineract에 연결할 수 없습니다. 나중에 다시 시도해 주세요.",
+        "unexpected": "예상치 못한 오류가 발생했습니다. 다시 시도해 주세요."
+      },
+      "dashboard": {
+        "role": "CB-ILD 역할",
+        "runBatch": "일괄 실행",
+        "batchStarted": "모든 활성 클라이언트에 대한 일괄 제출이 시작되었습니다",
+        "total": "총 제출",
+        "accepted": "수락됨",
+        "pendingRetry": "재시도 대기 중",
+        "permanentlyFailed": "영구 실패",
+        "clientId": "클라이언트 ID",
+        "triggerType": "트리거 유형",
+        "status": "상태",
+        "cdcRef": "CDC 참조 ID",
+        "expiry": "만료일",
+        "submittedAt": "제출일",
+        "noSubmissions": "제출 내역 없음"
+      }
     }
   },
   "languages": {
@@ -4704,7 +4743,8 @@
     "Withdraw": "철회하다",
     "Yes": "예",
     "loan product will be active and available to clients": "대출 상품이 활성화되어 고객에게 제공되는 날짜입니다. 비어 있으면 대출 상품이 생성되자마자 활성화됩니다.",
-    "loan product will become inactive and unavailable to clients": "대출 상품이 비활성화되어 고객이 사용할 수 없게 되는 날짜입니다. 비어 있으면 로드 제품이 비활성화되지 않습니다."
+    "loan product will become inactive and unavailable to clients": "대출 상품이 비활성화되어 고객이 사용할 수 없게 되는 날짜입니다. 비어 있으면 로드 제품이 비활성화되지 않습니다.",
+    "Reporting Dashboard": "CB-ILD 보고 대시보드"
   },
   "countries": {
     "AF": "아프가니스탄",
